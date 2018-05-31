@@ -13,10 +13,15 @@ Clone this repository into safe-cli-boilerplate:
 ```
 git clone https://github.com/theWebalyst/safe-cli-boilerplate
 cd safe-cli-boilerplate
-npm install
 ```
 
 # Build for mock network
+
+Install the dependencies:
+```
+export NODE_ENV=dev
+npm install
+```
 
 Build an executable for the host OS only, the default (output in ./dist/mock):
 ```
@@ -64,6 +69,13 @@ The content of the file which has been read: Hello Safe World
 ```
 
 # Build for live network
+
+Install the dependencies:
+```
+export NODE_ENV=
+npm install
+```
+
 Build an executable for the host OS only, the default (output in ./dist/prod):
 ```
 export NODE_ENV=
