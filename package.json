@@ -15,7 +15,8 @@
       "node_modules/@maidsafe/safe-node-app/src/native/prod/*.*",
       "node_modules/@maidsafe/safe-node-app/src/native/mock/*.*"
     ]
-  },"bin": {
+  },
+  "bin": {
     "app": "safecmd.js"
   },
   "author": "theWebalyst",
@@ -26,5 +27,8 @@
     "filesize": "^3.6.1",
     "node-ipc": "^9.1.1",
     "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "pkg": "^4.3.1"
   }
 }
