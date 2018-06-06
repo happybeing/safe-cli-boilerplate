@@ -4,10 +4,27 @@
 
 This Project contains 'boilerplate' open source code which can be customised to create command line applications which interact with the SAFE Network. It uses [pkg](http://npmjs.com/package/pkg) to create packaged executables for Linux, Windows and Mac OS.
 
-The [SAFE Network](https://safenetwork.org/) is a truly autonomous, decentralised internet. A new basis for an open internet aligned with the original vision held by its creators and early users, with security, net neutrality and unmediated open access, all baked in. The Secure Access For Everyone (SAFE) Network tackles the increasing risks to individuals, business and nation states arising from over centralisation, domination by commercial monopolies, security risks from malware, hacking, surveillance and so on.
+The [SAFE Network](https://safenetwork.org/) is a truly autonomous, decentralised internet which operates using the resources of anonymous 'farmers' who are rewarded with a secure but efficient and scalable currency (Safecoin), which they can sell or use to purchase storage and other services on the network. Safecoin is efficent and scalable (non-blockchain based) secure and anonymous digital cash.
+
+The **Secure Access For Everyone Network** (SAFE) tackles the increasing risks to individuals, business and nation states arising from over centralisation, domination by commercial monopolies, security risks from malware, hacking, surveillance and so on. It's a new and truly open internet aligned with the original vision held by its creators and early users, with security, net neutrality and unmediated open access baked in.
+
+SAFE is an open source project of @maidsafe, a private company which is majority owned by a Scottish charity, both based in Scotland but which is decentralised with employees and contributors based around the globe.
+
+# Dependencies
+
+**SAFE Browser:** if you are not yet familiar with developing for SAFE Network, or have not previously used the 'mock' SAFE Browser to develop and test your code, I recommend that you try the [SAFE Network Nodejs](https://hub.safedev.org/platform/nodejs/) tutorial *before* proceeding. Doing so will ensure you have all the pre-requisites and help you understand anything not made explicit in the instructions below.
+
+**NodeJS:** check your versions of `node` and `npm` against the following which are known to work. Note that node v8.x is a requirment of the SAFE Network API:  [@maidsafe/safe-node-app](https://www.npmjs.com/package/@maidsafe/safe-node-app).
+
+```
+$ node --version
+v8.10.0
+$ npm --version
+5.6.0
+```
+I recommend `nvm` for managing `node` vesions.
 
 # Get the source
-If you are not yet familiar with developing for SAFE Network, or have not previously used the 'mock' SAFE Browser to develop and test your code, I recommend that you try the [SAFE Network Nodejs](https://hub.safedev.org/platform/nodejs/) Tutorial *before* proceeding. Doing so will ensure you have all the pre-requisites and help you understand anything not made explicit in the instructions below.
 
 Clone this repository into safe-cli-boilerplate:
 ```
@@ -17,7 +34,7 @@ cd safe-cli-boilerplate
 
 # Build for mock network
 
-Install the dependencies:
+If you have problems, please check the dependencies section above.
 ```
 export NODE_ENV=dev
 npm install
@@ -70,7 +87,7 @@ The content of the file which has been read: Hello Safe World
 
 # Build for live network
 
-Install the dependencies:
+If you have problems, please check the dependencies section above.
 ```
 export NODE_ENV=
 npm install
@@ -98,6 +115,15 @@ Pull requests are welcome for outstanding issues and feature requests. Please no
 Before submitting your code please consider using `Standard.js` formatting. You may also find it helps to use an editor with support for Standard.js when developing and testing. An easy way is just to use [Atom IDE](https://atom.io/packages/atom-ide-ui) with the package [ide-standardjs] (and optionally [standard-formatter](https://atom.io/packages/standard-formatter)). Or you can install NodeJS [Standard.js](https://standardjs.com/).
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/standard/standard)
+
+# Acknowledgments
+
+Thank you:
+
+- @b-zee for doing the hard bits and for his code which is now part of this repo.
+
+- @davidpbrown [@southside](https://forum.safedev.org/u/southside) [@draw](https://forum.safedev.org/u/draw) and @hunterlester, the brave members of SAFE developer forum who tested the first flaky versions!
+- @zeit for [pkg](https://github.com/zeit/pkg/)
 
 # Project License
 This project is made available under the [GPL-3.0 LICENSE](https://opensource.org/licenses/GPL-3.0) except for individual files which contain their own license so long as that file license is compatible with GPL-3.0. 
