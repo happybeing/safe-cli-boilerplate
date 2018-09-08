@@ -66,6 +66,7 @@ async function authorise (pid, appInfo, options) {
     '--pid', String(pid),
     '--uri'
   ]
+  console.log('authorise() appInfo: ' + JSON.stringify(appInfo))
 
   const app = await Safe.initializeApp(appInfo, null, options)
   const uri = await app.auth.genAuthUri({})

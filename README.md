@@ -4,9 +4,21 @@
 
 This Project contains 'boilerplate' open source code which can be customised to create command line applications which interact with the SAFE Network. It uses [pkg](http://npmjs.com/package/pkg) to create packaged executables for Linux, Windows and Mac OS.
 
-The [SAFE Network](https://safenetwork.org/) is a truly autonomous, decentralised internet which operates using the resources of anonymous 'farmers' who are rewarded with a secure but efficient and scalable currency (Safecoin), which they can sell or use to purchase storage and other services on the network. Safecoin is efficent and scalable (non-blockchain based) secure and anonymous digital cash.
+# About SAFE Network
+The [SAFE Network](https://safenetwork.tech/) is a truly autonomous, decentralised internet. This **Secure Access For Everyone Network** (SAFE) tackles the increasing risks to individuals, business and nation states arising from over centralisation, domination by commercial monopolies, security risks from malware, hacking, surveillance and so on. It's a new and truly open internet aligned with the original vision held by its creators and early users, with security, net neutrality and unmediated open access baked in.
 
-The **Secure Access For Everyone Network** (SAFE) tackles the increasing risks to individuals, business and nation states arising from over centralisation, domination by commercial monopolies, security risks from malware, hacking, surveillance and so on. It's a new and truly open internet aligned with the original vision held by its creators and early users, with security, net neutrality and unmediated open access baked in.
+The following are currently all unique to the SAFE Network:
+
+- all services are secure and decentralised, including a human readable DNS
+- highly censorship resistant to DDoS, deep packet inspection and nation state filters
+- truly autonomous network
+- data is guaranteed to be stored and available, forever with no ongoing fees (pay once to store)
+- truly decentralised 'proof of resource' (farming), and not 'proof of work' or 'proof of stake'
+- scalable non-blockchain based storage not just of hashes of data, but the data itself
+- scalable non-blockchain cryptographically secured currency (Safecoin) with zero transaction fees
+
+SAFE Network operates using the resources of anonymous 'farmers' who are rewarded with Safecoin, which they can sell or use to purchase storage and other services on the network. Safecoin is efficent and scalable (non-blockchain based) secure and anonymous digital cash.
+
 
 SAFE is an open source project of @maidsafe, a private company which is majority owned by a Scottish charity, both based in Scotland but which is decentralised with employees and contributors based around the globe.
 
@@ -126,6 +138,6 @@ Thank you:
 - @zeit for [pkg](https://github.com/zeit/pkg/)
 
 # Project License
-This project is made available under the [GPL-3.0 LICENSE](https://opensource.org/licenses/GPL-3.0) except for individual files which contain their own license so long as that file license is compatible with GPL-3.0. 
+This project is made available under the [GPL-3.0 LICENSE](https://opensource.org/licenses/GPL-3.0) except for individual files which contain their own license so long as that file license is compatible with GPL-3.0.
 
 The responsibility for checking this licensing is valid and that your use of this code complies lies with any person and organisation making any use of it.
