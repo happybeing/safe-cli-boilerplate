@@ -1,5 +1,6 @@
 # safe-cli-boilerplate
 dist/
+.nexe/
 
 ### What follows is the standard .gitignore for Node
 

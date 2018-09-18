@@ -4,11 +4,22 @@
   "description": "SAFE Network command line application (CLI) boilerplate example",
   "main": "safecmd.js",
   "scripts": {
+    "nexe": "nexe",
+    "build-test": "mkdirp ./dist && nexe safecmd.js -t linux-x64 --temp ./.nexe -o ./dist/safecmd",
+
+    "build": "mkdirp ./dist && nexe safecmd.js --temp ./.nexe -o ./dist/safecmd",
+    "buildall": "npm run build-linux && npm run build-win && npm run build-mac",
+    "build-linux": "mkdirp ./dist && nexe safecmd.js -t linux-x64 --temp ./.nexe -o ./dist/safecmd-x64-linux",
+    "build-win": "mkdirp ./dist && nexe safecmd.js -t windows-x64 --temp ./.nexe -o ./dist/safecmd-x64-windows.exe",
+    "build-mac": "mkdirp ./dist && nexe safecmd.js -t mac-x64 --temp ./.nexe -o ./dist/safecmd-x64-mac",
+
+    "pkg": "pkg",
     "testbuild": "pkg . -d -t node8-linux-x64 -o ./dist/mock/safecmd",
-    "build": "mkdirp ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/prod/*.* ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && pkg -t host -o ./dist/prod/safecmd safecmd.js",
-    "buildall": "mkdirp ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/prod/*.* ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && pkg -t linux,macos,win -o ./dist/prod/safecmd safecmd.js",
-    "build-mock": "mkdirp ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/mock/*.* ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && pkg -t host -o ./dist/mock/safecmd safecmd.js",
-    "buildall-mock": "mkdirp ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/mock/*.* ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && pkg -t linux,macos,win -o ./dist/mock/safecmd safecmd.js"
+    "pbuild": "mkdirp ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/prod/*.* ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && pkg -t host -o ./dist/prod/safecmd safecmd.js",
+    "pbuildall": "mkdirp ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/prod/*.* ./dist/prod/node_modules/@maidsafe/safe-node-app/src/native/prod/ && pkg -t linux,macos,win -o ./dist/prod/safecmd safecmd.js",
+    "pbuild-mock": "mkdirp ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/mock/*.* ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && pkg -t host -o ./dist/mock/safecmd safecmd.js",
+    "pbuildall-mock": "mkdirp ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && cp -R node_modules/@maidsafe/safe-node-app/src/native/mock/*.* ./dist/mock/node_modules/@maidsafe/safe-node-app/src/native/mock/ && pkg -t linux,macos,win -o ./dist/mock/safecmd safecmd.js"
+
   },
   "pkg": {
     "assets": [
@@ -26,10 +37,11 @@
     "@maidsafe/safe-node-app": "^0.8.1",
     "filesize": "^3.6.1",
     "node-ipc": "^9.1.1",
-    "yargs": "^11.0.0"
+    "yargs": "^11.1.0"
   },
   "devDependencies": {
     "mkdirp": "^0.5.1",
-    "pkg": "^4.3.1"
+    "nexe": "^2.0.0-rc.34",
+    "pkg": "^4.3.4"
   }
 }

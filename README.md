@@ -2,7 +2,7 @@
 
 # What's This?
 
-This Project contains 'boilerplate' open source code which can be customised to create command line applications which interact with the SAFE Network. It uses [pkg](http://npmjs.com/package/pkg) to create packaged executables for Linux, Windows and Mac OS.
+This Project contains 'boilerplate' open source code which can be customised to create command line applications which interact with the SAFE Network. It uses [nexe](https://www.npmjs.com/package/nexe) or [pkg](http://npmjs.com/package/pkg) to create packaged executables for Linux, Windows and Mac OS, although `nexe` can be used to build for other platforms too.
 
 # About SAFE Network
 The [SAFE Network](https://safenetwork.tech/) is a truly autonomous, decentralised internet. This **Secure Access For Everyone Network** (SAFE) tackles the increasing risks to individuals, business and nation states arising from over centralisation, domination by commercial monopolies, security risks from malware, hacking, surveillance and so on. It's a new and truly open internet aligned with the original vision held by its creators and early users, with security, net neutrality and unmediated open access baked in.
