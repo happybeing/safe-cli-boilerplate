@@ -5,13 +5,13 @@
   "main": "safecmd.js",
   "scripts": {
     "nexe": "nexe",
-    "build-test": "mkdirp ./dist && nexe safecmd.js -t linux-x64 --temp ./.nexe -o ./dist/safecmd",
+    "build-test": "mkdirp ./dist && nexe safecmd.js -t linux-x64 -o ./dist/safecmd",
 
-    "build": "mkdirp ./dist && nexe safecmd.js --temp ./.nexe -o ./dist/safecmd",
+    "build": "mkdirp ./dist && nexe safecmd.js -o ./dist/safecmd",
     "buildall": "npm run build-linux && npm run build-win && npm run build-mac",
-    "build-linux": "mkdirp ./dist && nexe safecmd.js -t linux-x64 --temp ./.nexe -o ./dist/safecmd-x64-linux",
-    "build-win": "mkdirp ./dist && nexe safecmd.js -t windows-x64 --temp ./.nexe -o ./dist/safecmd-x64-windows.exe",
-    "build-mac": "mkdirp ./dist && nexe safecmd.js -t mac-x64 --temp ./.nexe -o ./dist/safecmd-x64-mac",
+    "build-linux": "mkdirp ./dist && nexe safecmd.js -t linux-x64 -o ./dist/safecmd-x64-linux",
+    "build-win": "mkdirp ./dist && nexe safecmd.js -t windows-x64 -o ./dist/safecmd-x64-windows.exe",
+    "build-mac": "mkdirp ./dist && nexe safecmd.js -t mac-x64 -o ./dist/safecmd-x64-mac",
 
     "pkg": "pkg",
     "testbuild": "pkg . -d -t node8-linux-x64 -o ./dist/mock/safecmd",
