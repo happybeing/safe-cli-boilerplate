@@ -6,6 +6,7 @@
   "scripts": {
     "nexe": "nexe",
     "build-test": "mkdirp ./dist && nexe safecmd.js -t linux-x64 -o ./dist/safecmd",
+    "test": "mkdirp ./dist && nexe -r node_modules/@maidsafe/safe-node-app/src/native/prod/*.* --verbose safecmd.js -t linux-x64 -o ./dist/safecmd-nexe",
 
     "build": "mkdirp ./dist && nexe safecmd.js -o ./dist/safecmd",
     "buildall": "npm run build-linux && npm run build-win && npm run build-mac",
